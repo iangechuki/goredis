@@ -97,7 +97,6 @@ func (r *Resp) readArray() (Value, error) {
 			return v, err
 		}
 		v.array = append(v.array, val)
-		fmt.Printf("val:%d type:%s \n", i, val.typ)
 	}
 
 	return v, nil

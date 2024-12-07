@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"strconv"
 )
@@ -77,7 +76,7 @@ func NewWriter(w io.Writer) *Writer {
 
 func (w *Writer) Write(v Value) error {
 	var bytes = v.Marshal()
-	fmt.Println(bytes)
+
 	_, err := w.write.Write(bytes)
 	if err != nil {
 		return err
