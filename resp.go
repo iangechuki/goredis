@@ -22,6 +22,10 @@ type Value struct {
 	bulk  string
 	array []Value
 }
+
+// Resp is a RESP reader
+// It reads from a reader and returns a Value
+// It supports reading strings, integers, bulk strings, and arrays
 type Resp struct {
 	reader *bufio.Reader
 }
